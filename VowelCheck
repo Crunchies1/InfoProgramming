@@ -1,0 +1,26 @@
+word=str(input("Input your word."))
+lowerword=word.lower()
+wlist=list(lowerword)
+c=len(wlist)
+d=c-1
+r=0
+ee=0
+for i in range(c):
+    if wlist[r]=="a":
+        ee=ee+1
+        r=r+1
+    elif wlist[r]=="e":
+        ee=ee+1
+        r=r+1
+    elif wlist[r]=="i":
+        ee=ee+1
+        r=r+1
+    elif wlist[r]=="o":
+        ee=ee+1
+        r=r+1
+    elif wlist[r]=="u":
+        ee=ee+1
+        r=r+1
+    else:
+        r=r+1
+print(ee)
