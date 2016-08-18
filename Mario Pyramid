@@ -1,0 +1,6 @@
+pyramidheight=int(input("Enter pyramid height"))
+x=1
+for i in range(pyramidheight):
+    print(x*"x")
+    x=x+1
+
