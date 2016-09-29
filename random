@@ -1,0 +1,16 @@
+import random
+
+number=random.uniform(0.1,9.9)
+print(number)
+
+y=5
+Choose_Name = ["James","John","Mark","Rick"]
+while y!=1:
+    chosen = random.choice(Choose_Name)
+    print(chosen)
+    c=input("would you like to remove this name from the list? y/n")
+    if c=="y":
+        Choose_Name.remove(chosen)
+        y=y-1
+    if c=="n":
+        print("ok")
