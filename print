@@ -1,0 +1,4 @@
+print("Hello world")
+print((6*4/9/2)-34)
+print(22/7)
+
