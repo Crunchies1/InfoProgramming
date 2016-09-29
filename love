@@ -1,0 +1,3 @@
+x=input("Which subject do you love the most?")
+while x!="computer science":
+    x=input("Which subject do you love the most?")
