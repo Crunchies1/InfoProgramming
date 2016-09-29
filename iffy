@@ -1,0 +1,8 @@
+height1=int(input("What is your height person 1?"))
+height2=int(input("What is your height person 2?"))
+if height1>height2:
+    print("person 1 is taller than person 2.")
+if height2>height1:
+    print("person 2 is taller than person 1.")
+if height2==height1:
+    print("person 2 is the same height than person 1.")
