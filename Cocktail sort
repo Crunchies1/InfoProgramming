@@ -1,0 +1,40 @@
+print("Please enter the numbers you wish to enter and it will be sorted using the cocktail sort. Entering a will stop the process.")
+x=0
+c=[]
+d=0
+e=0
+while x==0:
+    y=input("enter number")
+    if y=='a':
+        x=x+1
+    else:
+        c.append(int(y))
+        d=d+1
+for i in range(10):
+    e=0
+    for i in range(d-1):
+        if c[e]>c[e+1]:
+            p=c[e+1]
+            c[e+1]=c[e]
+            c[e]=p
+            e=e+1
+            print(c)
+        elif c[e]<c[e+1]:
+            e=e+1
+            print(c)
+        elif c[e]==c[e+1]:
+            e=e+1
+            print(c)
+    for i in range(d-1):
+        if c[e]<c[e-1]:
+            p=c[e-1]
+            c[e-1]=c[e]
+            c[e]=p
+            e=e-1
+            print(c)
+        elif c[e]>c[e-1]:
+            e=e-1
+            print(c)
+        elif c[e]==c[e-1]:
+            e=e-1
+            print(c)
