@@ -1,0 +1,21 @@
+c=[]
+p=0
+d=0
+for i in range(9):
+    y=int(input("enter number"))
+    c.append(y)
+for i in range(10):
+    d=0
+    for i in range(8):
+        if c[d]>c[d+1]:
+            p=c[d+1]
+            c[d+1]=c[d]
+            c[d]=p
+            d=d+1
+            print(c)
+        elif c[d]<c[d+1]:
+            d=d+1
+            print(c)
+        elif c[d]==c[d+1]:
+            d=d+1
+            print(c)
