@@ -1,0 +1,27 @@
+x=0
+r=0
+u=0
+ccc=0
+ddd=0
+c=[]
+ok=[]
+print("Values entered will be sorted by a selection sort. Entering k will stop the process.")
+while x==0:
+        z=input("Please enter a value.")
+        if z=="k":
+            x=x+1
+        else:
+            c.append(int(z))
+            ccc=ccc+1
+print(c)
+# print(min(c)) is the way to find the smallest number
+
+while u!=ccc:
+    ddd=c.index((min(c)))
+    r=min(c)
+    ok.append(r)
+    c.remove(min(c))
+    print(c)
+    print(ok)
+    print(".")
+    u=u+1
