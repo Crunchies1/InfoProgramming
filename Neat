@@ -1,0 +1,28 @@
+x=101
+k=[]
+for i in range(899):
+    y=str(x)
+    c=[]
+    for digit in y:
+        c.append(int(digit))
+    r=c[0]+c[1]+c[2]
+    d=x/r
+    numberint=int(d)
+    if numberint==d:
+        k.append(x)
+        x=x+1
+    if numberint!=d:
+        x=x+1
+x=1000
+y=str(x)
+c=[]
+for digit in y:
+    c.append(int(digit))
+r=c[0]+c[1]+c[2]+c[3]
+d=x/r
+numberint=int(d)
+if numberint==d:
+    k.append(x)
+else:
+    x=x
+print(k)
