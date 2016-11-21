@@ -1,0 +1,55 @@
+SELECT population FROM world
+  WHERE name = 'Germany'
+
+SELECT name, population FROM world
+  WHERE name IN ('Ireland', 'Iceland', 'Denmark');
+
+SELECT name, area FROM world
+  WHERE area BETWEEN 200000 AND 250000
+
+SELECT name, continent, population FROM world
+
+SELECT name FROM world
+WHERE population>200000000
+
+SELECT name, GDP/population FROM world
+where population>200000000
+
+SELECT name, population/1000000 FROM world
+where continent='South America'
+
+SELECT name, population FROM world
+where name IN ('France','Germany','Italy')
+
+SELECT name FROM world
+where name LIKE ('United%')
+
+SELECT name, population, area FROM world
+where (area>3000000) or population>250000000
+
+SELECT name, population, area FROM world
+where ((area>3000000) and population<250000000) or ((area<3000000) and population>250000000)
+
+SELECT name, ROUND(population/1000000,2), ROUND(GDP/1000000000,2) FROM world
+where continent IN('South America')
+
+SELECT name, ROUND(GDP/population,-3) FROM world
+where GDP>=1000000000000
+
+SELECT name,
+       CASE WHEN continent='Oceania' THEN 'Australasia'
+            ELSE continent END
+  FROM world
+ WHERE name LIKE 'N%'
+
+SELECT name,
+CASE WHEN continent IN ('North America', 'South America', 'Caribbean') THEN 'America' WHEN continent IN ('Europe', 'Asia') THEN 'Eurasia'
+ELSE continent END
+FROM world
+WHERE name LIKE 'A%' OR name LIKE 'B%'
+
+SELECT name, continent,
+CASE WHEN continent IN ('Eurasia') THEN 'Europe/Asia' WHEN name = ('Turkey') THEN 'Europe/Asia' WHEN continent = "Oceania" THEN "Australasia" WHEN (continent ="Caribbean" AND name NOT LIKE "B%") THEN 'South America' WHEN (continent="Caribbean" AND name LIKE 'B%') THEN 'North America'
+ELSE continent END
+FROM world
+WHERE tld IN ('.ag','.ba','.bb','.ca','.cn','.nz','.ru','.tr','.uk')
