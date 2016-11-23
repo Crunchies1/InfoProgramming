@@ -1,0 +1,73 @@
+define List
+    open Monsters.txt as f
+          REPEAT FOR f
+          parts = split line by ","
+          append parts[1] into List
+    remove "Name" from List
+    print List
+
+
+
+def MakeList():
+    monster_list = []
+    with open('Monsters.txt') as f:
+        for line in f:
+            parts = line.split(",")
+            monster_list.append(parts[1])
+        monster_list.remove("Name")
+    print(monster_list)
+    
+MakeList()
+
+def Interface():
+    print("1. Read the file.")
+    print("2. Search the array for a particular monster.")
+    print("")
+    print("3. End the program.")
+
+def get_menu_choice():
+    option_valid=False
+    while not option_valid:
+        try:
+            choice=int(input("Option Selected:  "))
+            if 1<=choice<=3:
+                option_valid=True
+            else:
+                print("Please enter a valid option")
+        except ValueError:
+            print("Please enter a valid option")
+    return choice
+
+def manage_monster():
+    print("This is the Monster Interface program.")
+    print()
+    noexit=True
+    while noexit:
+        Interface()
+        option=get_menu_choice()
+        print()
+        if option==1:
+            with open('Monsters.txt') as f:
+                monster_list=[]
+                for line in f:
+                    parts=line.split(",")
+                    monster_list.append(parts)
+                print(monster_list)
+        elif option==2:
+            monstertitle=input("Please input the monster title:")
+            with open('Monsters.txt') as f:
+                x=0
+                for line in f:
+                    parts = line.split(",")
+                    hark=(parts[1])
+                    if hark==monstertitle:
+                        x=1
+                        break
+                if x==1:
+                    print("Monster found!")
+                    time.sleep(2)
+                    print(line)
+                elif x==0:
+                    print("Monster not found.")
+
+         
