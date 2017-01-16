@@ -1,0 +1,53 @@
+x=0
+y=0
+def options():
+    option_valid=False
+    while not option_valid:
+        try:
+            choice=int(input("Please enter your 6 digit membership number"))
+            if (len(str(choice))==6 and 0<=choice<=999999) or choice==-1:
+                option_valid=True
+            else:
+                print("Please enter a valid option")
+        except ValueError:
+            print("Please enter a valid option")
+    return choice
+def options2():
+    option_valid=False
+    while not option_valid:
+        try:
+            choice2=input("Please enter the date")
+            print(choice2)
+            if len(str(choice2))==8 or int(choice2)==-1:
+                option_valid=True
+            else:
+                print("Please enter the full date")
+        except ValueError:
+            print("Please enter a valid option")
+    return choice2
+OriStr=input("Please enter the original string")
+SplitStr=OriStr.split(" ")
+while x==0:
+    if len(SplitStr)<10:
+        SplitStr.append("(Empty)")
+    else:
+        x=1
+print(SplitStr)
+
+f=open("sports.txt","w+")
+while y==0:
+    print("If you wish to end the process, type ""-1""")
+    option=options()
+    option2=options2()
+    newlist=[]
+    if int(option)==-1:
+        y=1
+    if int(option2)==-1:
+        y=1
+    f.write(str(option))
+    f.write(str(option2))
+f.close()
+prinfile=open("sports.txt","r")
+xx=prinfile.readlines()
+print(xx)
+prinfile.close()
