@@ -1,3 +1,4 @@
+#not fully fnished
 x=0
 y=0
 def options():
@@ -12,19 +13,76 @@ def options():
         except ValueError:
             print("Please enter a valid option")
     return choice
-def options2():
+def day():
     option_valid=False
     while not option_valid:
         try:
-            choice2=input("Please enter the date")
-            print(choice2)
-            if len(str(choice2))==8 or int(choice2)==-1:
+            day=input("Please enter the day (1st is 01, 11th is 11)")
+            print(day)
+            if 1<=int(day)<=31 and len(str(day))==2:
                 option_valid=True
             else:
-                print("Please enter the full date")
+                print("Please enter a valid day")
         except ValueError:
-            print("Please enter a valid option")
-    return choice2
+            print("Please enter a valid day")
+    return day
+
+def day2():
+    option_valid=False
+    while not option_valid:
+        try:
+            day2=input("Please enter the day (1st is 01, 11th is 11))")
+            print(day2)
+            if 1<=int(day2)<=28 and len(str(day2))==2:
+                option_valid=True
+            else:
+                print("Please enter a valid day")
+        except ValueError:
+            print("Please enter a valid day")
+    return day2
+
+def day3():
+    option_valid=False
+    while not option_valid:
+        try:
+            day3=input("Please enter the day (1st is 01, 11th is 11))")
+            print(day3)
+            if 1<=int(day3)<=30 and len(str(day3))==2:
+                option_valid=True
+            else:
+                print("Please enter a valid day")
+        except ValueError:
+            print("Please enter a valid day")
+    return day3
+
+def month():
+    option_valid=False
+    while not option_valid:
+        try:
+            month=input("Please enter the month (January is 01, December is 12)")
+            print(month)
+            if 1<=int(month)<=12 and len(str(month))==2:
+                option_valid=True
+            else:
+                print("Please enter a valid month")
+        except ValueError:
+            print("Please enter a valid month")
+    return month
+
+def year():
+    option_valid=False
+    while not option_valid:
+        try:
+            year=input("Please enter the year (2000 is 00, 2099 would be 99)")
+            print(year)
+            if 0<=int(year)<=99 and len(str(year))==2:
+                option_valid=True
+            else:
+                print("Please enter a valid year")
+        except ValueError:
+            print("Please enter a valid year")
+    return year
+
 OriStr=input("Please enter the original string")
 SplitStr=OriStr.split(" ")
 while x==0:
@@ -36,16 +94,33 @@ print(SplitStr)
 
 f=open("sports.txt","w+")
 while y==0:
-    print("If you wish to end the process, type ""-1""")
+    print("If you wish to end the process, type ""-1"" anywhere you wish.")
     option=options()
-    option2=options2()
-    newlist=[]
+    option2=month()
+    if option2=="02":
+        option3=day2()
+        option4=year()
+        option5=(option3,"/",option2,"/",option4)
+    if option2=="04" or "06" or "09" or "11":
+        option3=day3()
+        option4=year()
+        option5=(option3,"/",option2,"/",option4)
+    if option2=="01" or "03" or "05" or "07" or "08" or "10" or "12":
+        option3=day()
+        option4=year()
+        option5=(option3,"/",option2,"/",option4)
+    print(option5)
     if int(option)==-1:
         y=1
     if int(option2)==-1:
         y=1
-    f.write(str(option))
-    f.write(str(option2))
+    if int(option3)==-1:
+        y=1
+    if int(option4)==-1:
+        y=1
+    else:
+        f.write(str(option))
+        f.write(str(option5))
 f.close()
 prinfile=open("sports.txt","r")
 xx=prinfile.readlines()
