@@ -1,3 +1,21 @@
+3.1
+DECLARE ArrA: Array[1,10]
+
+3.2
+Original String entered
+String split by spaces and turned into a list
+if the length of the amount of items in the list is less than 10, append an (Empty) to the list
+repeat above step until number of items in list reaches 10
+
+3.3
+DECLARE ArrA: Array[1,10]
+INPUT OriginalStr
+Split<---OriginalStr SPLIT(" ")
+WHILE LENGTH ArrA<10
+Append (Empty) to ArrA
+ENDWHILE
+
+3.4 & 3.5
 x=0
 OriStr=input("Please enter the original string")
 SplitStr=OriStr.split(" ")
@@ -7,3 +25,10 @@ while x==0:
     else:
         x=1
 print(SplitStr)
+
+3.6
+OriStr = ""
+OriStr = "i i i i i i i i i i i"
+OriStr = "Normal Data"
+OriStr = "99 88"
+Test whether program works for an empty string, a string which goes over 11 seperate characters, A normal string and numbers.
