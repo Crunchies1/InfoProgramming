@@ -1,0 +1,9 @@
+x=0
+OriStr=input("Please enter the original string")
+SplitStr=OriStr.split(" ")
+while x==0:
+    if len(SplitStr)<10:
+        SplitStr.append("(Empty)")
+    else:
+        x=1
+print(SplitStr)
