@@ -17,14 +17,37 @@ ENDWHILE
 
 3.4 & 3.5
 x=0
-OriStr=input("Please enter the original string")
-SplitStr=OriStr.split(" ")
-while x==0:
-    if len(SplitStr)<10:
-        SplitStr.append("(Empty)")
+y=0
+z=0
+perm=[]
+originalstring=input("Please enter the original string:")
+listed=list(originalstring)
+while x<len(listed):
+    temp=[]
+    while x<len(listed) and y!=1:
+        if listed[x]==listed[x].upper():
+            print(listed[x])
+            temp.append(listed[x])
+            x=x+1
+            y=1
+    while x<len(listed) and y!=0:
+        if listed[x]==listed[x].lower():
+            print(listed[x])
+            temp.append(listed[x])
+            x=x+1
+        else:
+            y=0
+            joined="".join(temp)
+            perm.append(joined)
+
+joined="".join(temp)
+perm.append(joined)
+while z==0:
+    if len(perm)<10:
+        perm.append("(Empty)")
     else:
-        x=1
-print(SplitStr)
+        z=1
+print(perm)
 
 3.6
 OriStr = ""
