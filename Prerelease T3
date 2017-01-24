@@ -9,8 +9,9 @@ repeat above step until number of items in list reaches 10
 
 3.3
 DECLARE ArrA: Array[1,10]
+DECLARE CAPITAL: CHARACTER UPPER
 INPUT OriginalStr
-Split<---OriginalStr SPLIT(" ")
+Split<---OriginalStr SPLIT("CAPITAL")
 WHILE LENGTH ArrA<10
 Append (Empty) to ArrA
 ENDWHILE
