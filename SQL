@@ -1,0 +1,26 @@
+import sqlite3
+conn=sqlite3.connect("SQLDatabase.sqlite")
+
+
+def create_exam_question():
+    with conn:
+        conn.execute("CREATE TABLE Questions11(id INTEGER PRIMARY KEY, Unit_Number INT,Unit STR, Topic STR, Revision_Tool STR, Example_Question STR)")
+        conn.execute("INSERT INTO Questions11(Unit_Number,Unit,Topic,Revision_Tool,Example_Question) VALUES(1,'Information Representation Objectives','Number representation','show understanding of the basis of different number systems and use the binary, denary and hexadecimal number system','Explain why the different numbering systems exist')")
+        conn.execute("INSERT INTO Questions11(Unit_Number,Unit,Topic,Revision_Tool,Example_Question) VALUES(1,'Information Representation Objectives','Number representation','convert a number from one number system to another','Convert 10101010 to hex and denary')")
+        conn.execute("INSERT INTO Questions11(Unit_Number,Unit,Topic,Revision_Tool,Example_Question) VALUES(1,'Information Representation Objectives','Number representation','express a positive or negative integer in 2’s complement form','https://courses.cs.vt.edu/~csonline/NumberSystems/Questions/TwosComplement/index.html')")
+        conn.execute("INSERT INTO Questions11(Unit_Number,Unit,Topic,Revision_Tool,Example_Question) VALUES(1,'Information Representation Objectives','Number representation','show understanding of, and be able to represent, character data in its internal binary form depending on the character set used','Using an ASCII table convert A to a')")
+
+
+def print_exam_questions():
+    with conn:
+        f=conn.execute("SELECT Unit_Number,Unit,Topic,Revision_Tool,Example_Question from Questions11")
+        for row in f:
+            print("Unit_Number: ",row[0])
+            print("Unit: ",row[1])
+            print("Topic: ",row[2])
+            print("Revision_Tool: ",row[3])
+            print("Example_Question: ",row[4])
+        print("The End")
+
+create_exam_question()
+print_exam_questions()
