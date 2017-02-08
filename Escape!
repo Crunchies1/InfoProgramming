@@ -1,0 +1,174 @@
+import random
+import time
+
+Round=1
+Money=5
+Health=50
+WinLoss=0
+DeadAlive=1
+Modify=0
+Modify2=0
+
+
+def instructions():
+    print("The aim of the game is to survive.")
+    time.sleep(1)
+    print("You can only win by inputting the correct four letter integer code.")
+    time.sleep(1)
+    print("This four letter code is randomly generated.")
+    time.sleep(1)
+    print("You are allowed to buy items or clues after a round.")
+    time.sleep(1)
+    print("After a round you will always lose health and gain rewards.")
+    time.sleep(1)
+    print("Health loss and rewards vary depending on certain hidden factors.")
+    time.sleep(1)
+    print("Good luck.")
+    time.sleep(1)
+    print("Loading...")
+    time.sleep(5)
+
+def shop_menu():
+    print("1. Code Hint:$150 (Get a random integer, integers can be repeated and place is not given.")
+    print("2. Barrier:$50 (Gets stronger when used more)")
+    print("3. Flimin Liquid:$22 (Restore 12 health)")
+    print("4. Almost Broken Gun and Bullets:$100 (Lose no health the next two rounds")
+    print("5. Flimin Flask:$80 (You will get maximum health)")
+    print()
+    print("0. Purchase nothing.")
+
+
+def shop_validation():
+    option_valid=False
+    while not option_valid:
+        try:
+            choice=int(input("Option Selected:  "))
+            if 0<=choice<=5:
+                option_valid=True
+            else:
+                print("Please enter a valid option")
+        except ValueError:
+            print("Please enter a valid option")
+    return choice
+
+
+def round1():
+    rounddifficulty=50-Health+Round
+    randomfactorhp=random.randint(2,6)
+    totalhealthloss=round((rounddifficulty/10)+(randomfactorhp/2))
+    return totalhealthloss
+
+
+def round2():
+    rounddifficulty=50-Health+Round
+    randomfactormoney=random.randint(5,10)
+    totalmoneygain=round((rounddifficulty)+randomfactormoney*(Money/10))
+    return totalmoneygain
+
+
+def Healthy():
+    x=Health
+    return x
+
+def Moneys():
+    xxx=Money
+    return xxx
+
+def HealthLoss():
+    healthloss=round1()
+    xx=Healthy()
+    Health=xx-healthloss
+    print("You have lost",healthloss,"health, you are now at",Health,"health.")
+
+def MoneyGain():
+    moneygain=round2()
+    xxxx=Moneys()
+    Money=xxxx+moneygain
+    print("You have gained $",moneygain,", you are now at $",Health,".")
+
+def generate_code():
+    int1=random.randint(1,9)
+    int2=random.randint(1,9)
+    int3=random.randint(1,9)
+    int4=random.randint(1,9)
+    code=[int1,int2,int3,int4]
+    return code
+
+Truecode=generate_code()
+
+
+def enter_code():
+    inputcode=int(input("Please input the code once."))
+    while (inputcode>9999 or inputcode<0) and len(inputcode)!=4:
+        inputcode=int(input("Please input the code once."))
+    coded=list(inputcode)
+    if coded==Truecode:
+        print("You have escaped!")
+        WinLoss=1
+    return WinLoss
+
+def purchase():
+    Moneyy=Moneys()
+    print("This is the last shop.")
+    print("You have $",Moneyy," left.")
+    print()
+    noexit=True
+    while noexit:
+        shop_menu()
+        option=shop_validation()
+        print()
+        if option==0:
+            print("Exited without buying.")
+        if option==1:
+            print(Truecode[0] or Truecode[1] or Truecode[2] or Truecode[3])
+            Money=Money-150
+        if option==2:
+            print("Next round difficulty decreased.")
+            Modify=Modify+1
+            Money=Money-50
+        if option==3:
+            print("Health increased by 12")
+            Health=Health+12
+            Money=Money-22
+            if Health>50:
+                Health=50
+        if option==4:
+            print("Next two rounds you will lose no health.")
+            Modify2=Modify2+1
+            Money=Money-100
+        if option==5:
+            print("Health restored to full.")
+            Health=50
+            Money=Money-80
+
+
+def dedd():
+    cal=DeadAlive
+    return cal
+
+def interface():
+    print("You have",Health," health. You have $",Money,".")
+    enter=input("Click enter to start the round.")
+    if enter=="":
+        enter_code()
+        HealthLoss()
+        MoneyGain()
+        purchase()
+        time.sleep(2)
+    else:
+        while enter!="":
+            enter=input("Click enter to start the round.")
+            enter_code()
+            HealthLoss()
+            MoneyGain()
+            purchase()
+            time.sleep(2)
+    if Health<=0:
+        x=dedd()
+        DeadAlive=x-1
+        if DeadAlive==0:
+            print("You are dead.")
+
+instructions()
+while DeadAlive>0:
+    interface()
