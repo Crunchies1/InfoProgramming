@@ -1,0 +1,7 @@
+i=101
+while i<1000:
+    u=list(str(i))
+    z=int(u[0])+int(u[1])+int(u[2])
+    if (i/z)==round(i/z):
+        print(i)
+    i=i+1
