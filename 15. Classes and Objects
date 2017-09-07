@@ -10,18 +10,21 @@ class Point:
         """ Compute my distance from the origin """
         return ((self.x ** 2) + (self.y ** 2)) ** 0.5
    
-   def print_point(pt):
+    def print_point(pt):
         print("({0}, {1})".format(pt.x, pt.y))
        
-   def __str__(self):    # All we have done is renamed the method
+    def __str__(self):    # All we have done is renamed the method
         return "({0}, {1})".format(self.x, self.y)
             
-   def halfway(self, target):
+    def halfway(self, target):
         """ Return the halfway point between myself and the target """
         mx = (self.x + target.x)/2
         my = (self.y + target.y)/2
         return Point(mx, my)
-
+    def reflect_x(self):
+        return ((self.x, -(self.y)))
+    def slope_from_origin(self):
+        return ((self.x, self.y))
 
 p = Point()         # Instantiate an object of type Point
 q = Point()         # Make a second point
@@ -31,6 +34,9 @@ print(p.x, p.y, q.x, q.y)  # Each point object has its own x and y
 
 print("(x={0}, y={1})".format(p.x, p.y))
 distance_from_origin = p.x * p.x + p.y * p.y
-print(p.to_string())
 str(p)
 r = p.halfway(q)
+reflect_x=("(x={0}, y={1})".format(p.x, -(p.y)))
+print(reflect_x)
+slope_from_origin=(p.y/p.x)
+Point(x)
