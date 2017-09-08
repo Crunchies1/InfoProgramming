@@ -21,10 +21,14 @@ class Point:
         mx = (self.x + target.x)/2
         my = (self.y + target.y)/2
         return Point(mx, my)
+
     def reflect_x(self):
+        """ Reflect the point in the x axis"""
         return ((self.x, -(self.y)))
+
     def slope_from_origin(self):
-        return ((self.x, self.y))
+        """ Finds the gradient of a line from the origin"""
+        return (float(self.y/self.x))
 
 p = Point()         # Instantiate an object of type Point
 q = Point()         # Make a second point
@@ -37,6 +41,46 @@ distance_from_origin = p.x * p.x + p.y * p.y
 str(p)
 r = p.halfway(q)
 reflect_x=("(x={0}, y={1})".format(p.x, -(p.y)))
-print(reflect_x)
-slope_from_origin=(p.y/p.x)
-Point(x)
+print(p.reflect_x())
+print(q.slope_from_origin())
+w,h=4,100
+lis=[[0 for x in range(4)]for y in range(h)]
+class SMS_store:
+    """Create a new class"""
+    global c
+    c=0
+
+    def __init__(self, has_been_viewed=False, from_number=0, time_arrived=0, text_of_SMS=0, c=0):
+        """"""
+        self.has_been_viewed=has_been_viewed
+        self.from_number=from_number
+        self.time_arrived=time_arrived
+        self.text_of_SMS=text_of_SMS
+        self.c=c
+
+    def add_new_arrival(self, from_number, time_arrived, text_of_SMS):
+        fn=from_number
+        ta=time_arrived
+        tSmS=text_of_SMS
+        lis[c][0]=fn
+        lis[c][1]=ta
+        lis[c][2]=tSmS
+        self.c= self.c + 1
+        return lis
+
+    def message_count(self):
+        return(self.c)
+
+    #def get_unread_indexes(self):
+
+    #def get_message(i):
+
+    #def delete(i):
+
+    #def clear():
+
+my_inbox=SMS_store()
+my_inbox.add_new_arrival("0122138329", "12:45", "Ok here you go")
+print(lis)
+x=my_inbox.message_count()
+print x
