@@ -47,40 +47,68 @@ w,h=4,100
 lis=[[0 for x in range(4)]for y in range(h)]
 class SMS_store:
     """Create a new class"""
-    global c
-    c=0
 
-    def __init__(self, has_been_viewed=False, from_number=0, time_arrived=0, text_of_SMS=0, c=0):
+    def __init__(self, has_been_viewed=False, from_number=0, time_arrived=0, text_of_SMS=0, c=0, x=0):
         """"""
         self.has_been_viewed=has_been_viewed
         self.from_number=from_number
         self.time_arrived=time_arrived
         self.text_of_SMS=text_of_SMS
-        self.c=c
+        self.c=0
+        self.x=0
 
-    def add_new_arrival(self, from_number, time_arrived, text_of_SMS):
+    def add_new_arrival(self, from_number, time_arrived, text_of_SMS, has_been_viewed):
         fn=from_number
         ta=time_arrived
         tSmS=text_of_SMS
-        lis[c][0]=fn
-        lis[c][1]=ta
-        lis[c][2]=tSmS
-        self.c= self.c + 1
-        return lis
+        viewed=has_been_viewed
+        self.c+=1
+        lis[self.c][0]=fn
+        lis[self.c][1]=ta
+        lis[self.c][2]=tSmS
+        lis[self.c][3]=viewed
+        return lis[self.c-1]
 
     def message_count(self):
         return(self.c)
 
-    #def get_unread_indexes(self):
+    def get_unread_indexes(self):
+        for i in range(100):
+            if lis[i][3]==("Viewed=False"):
+                print(i,",","3")
 
-    #def get_message(i):
+    def get_message(self, x):
+        viewed2="True"
+        lis[x][3]=viewed2
+        return lis[x]
+        
+        
+    def delete(self, x):
+        lis[x][0]=0
+        lis[x][1]=0
+        lis[x][2]=0
+        lis[x][3]=0
 
-    #def delete(i):
-
-    #def clear():
+    def clear(self):
+        for i in range(100):
+            lis[i][0]=0
+            lis[i][1]=0
+            lis[i][2]=0
+            lis[i][3]=0
 
 my_inbox=SMS_store()
-my_inbox.add_new_arrival("0122138329", "12:45", "Ok here you go")
+my_inbox.add_new_arrival("0122138329", "12:45", "Ok here you go","Viewed=False")
 print(lis)
-x=my_inbox.message_count()
-print x
+v=my_inbox.message_count()
+print(v)
+x=my_inbox.get_message(0)
+print(x)
+my_inbox.add_new_arrival("0122138329", "12:45", "Ok here you go","Viewed=False")
+print(lis)
+my_inbox.get_unread_indexes()
+x=my_inbox.get_message(1)
+print(x)
+my_inbox.clear()
+print(lis)
+x=my_inbox.get_message(4)
+print(x)
