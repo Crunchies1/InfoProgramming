@@ -1,5 +1,43 @@
 import copy
 
+class Point:
+    """ Create a new Point, at coordinates x, y """
+
+    def __init__(self, x=0, y=0):
+        """ Create a new point at x, y """
+        self.x = x
+        self.y = y
+
+    def distance_from_origin(self):
+        """ Compute my distance from the origin """
+        return ((self.x ** 2) + (self.y ** 2)) ** 0.5
+   
+    def print_point(pt):
+        print("({0}, {1})".format(pt.x, pt.y))
+       
+    def __str__(self):    # All we have done is renamed the method
+        return "({0}, {1})".format(self.x, self.y)
+            
+    def halfway(self, target):
+        """ Return the halfway point between myself and the target """
+        mx = (self.x + target.x)/2
+        my = (self.y + target.y)/2
+        return Point(mx, my)
+
+    def reflect_x(self):
+        """ Reflect the point in the x axis"""
+        return ((self.x, -(self.y)))
+
+    def slope_from_origin(self):
+        """ Finds the gradient of a line from the origin"""
+        return (float(self.y/self.x))
+
+p = Point()         # Instantiate an object of type Point
+q = Point()         # Make a second point
+p = Point(3, 4)
+q = Point(5, 12)
+print(p.x, p.y, q.x, q.y)  # Each point object has its own x and y
+
 class Rectangle:
     """ A class to manufacture rectangle objects """
 
@@ -10,9 +48,8 @@ class Rectangle:
         self.height = h
 
     def __str__(self):
-        return  "({0}, {1}, {2})"
-                  .format(self.corner, self.width, self.height)
-    
+        return  "({0}, {1}, {2})".format(self.corner, self.width, self.height)
+
     def grow(self, delta_width, delta_height):
         """ Grow (or shrink) this object by the deltas """
         self.width += delta_width
@@ -22,30 +59,57 @@ class Rectangle:
         """ Move this object by the deltas """
         self.corner.x += dx
         self.corner.y += dy
-    
+
     def same_coordinates(p1, p2):
-    return (p1.x == p2.x) and (p1.y == p2.y)
+        return (p1.x == p2.x) and (p1.y == p2.y)
+
+    def area(self, w, h):
+        self.width = w
+        self.height = h
+        area2=(self.width)*(self.height)
+        return area2
+
+    def perimeter(self, w, h):
+        self.width = w
+        self.height = h
+        perimeter2=(2*self.width)+(2*self.height)
+        return perimeter2
+
+    def flip(self, w,h):
+        r=self.h
+        self.h=self.w
+        self.w=r
+
+    def search_point(self, posn, w, h):
+        
+
     
-    def area(self, x, y, z, d):
-      r = Rectangle(Point(x, y), z, d)
-      test(r.area() == +(x-z)*+(y-d))
-
-
 box = Rectangle(Point(0, 0), 100, 200)
 bomb = Rectangle(Point(100, 80), 5, 10)    # In my video game
 print("box: ", box)
 print("bomb: ", bomb)
+
 r = Rectangle(Point(10,5), 100, 50)
 print(r)
 r.grow(25, -10)
 print(r)
 r.move(-10, 10)
 print(r)
+shape=Rectangle()
 p1 = Point(3, 4)
 p2 = Point(3, 4)
-same_coordinates(p1, p2)
+p1 is p2
+
+p3 = p1
+p1 is p3
+
 p1 = Point(3, 4)
 p2 = copy.copy(p1)
 p1 is p2
-same_coordinates(p1, p2)
+
+x=((Point(0, 0)), 10, 5)
+aa=shape.area(Rectangle, 10, 5)
+pr=shape.perimeter(Rectangle, 10, 5)
+print(aa)
+print(pr)
 
