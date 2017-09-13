@@ -1,0 +1,27 @@
+#Let d(n) be defined as the sum of proper divisors of n (numbers less than n which divide evenly into n).
+#If d(a) = b and d(b) = a, where a != b, then a and b are an amicable pair and each of a and b are called amicable numbers.
+
+#For example, the proper divisors of 220 are 1, 2, 4, 5, 10, 11, 20, 22, 44, 55 and 110;
+#therefore d(220) = 284. The proper divisors of 284 are 1, 2, 4, 71 and 142; so d(284) = 220.
+
+#Evaluate the sum of all the amicable numbers under 10000.
+
+print(4%2) #modulus
+sum3=0
+for i in range(10000):
+    k=1
+    t=0
+    sum=0
+    sum2=0
+    numbertobedivided=i
+    for x in range(numbertobedivided):
+        if numbertobedivided%k==0:
+            sum=sum+k
+            k=k+1
+    for y in range(sum):
+        t=t+1
+        if sum%t==0:
+            sum2=sum2+t
+    if sum==sum2:
+        sum3=sum3+(sum+sum2)
+print(sum3)
