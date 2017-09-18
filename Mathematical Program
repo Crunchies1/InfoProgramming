@@ -1,4 +1,4 @@
-mport random
+import random
 import time
 
 class Question:
@@ -34,9 +34,9 @@ def create_q():
           "4. Quit")
     return menu
 
-points1=0
 
 def generate_question(difficulty):
+    points1=0
     type_of_question=difficulty
     if type_of_question<4:
         first_number=random.randint(1,10)
@@ -49,7 +49,7 @@ def generate_question(difficulty):
             v=input(first_number,"+",second_number)
             if v==answer:
                 points1=points1+points
-                
+
         if sign==2:
             answer=first_number-second_number
             print(first_number,"-",second_number)
@@ -64,11 +64,11 @@ def generate_question(difficulty):
                 points1=points1+points
         if sign==4:
             answer=first_number/second_number
-            print(first_number,"÷",second_number)
-            v=input=(first_number,"÷",second_number)
+            print(first_number,"/",second_number)
+            v=input=(first_number,"/",second_number)
             if v==answer:
                 points1=points1+points
-            
+
     if 4<=type_of_question<7:
         first_number=random.randint(1,20)
         second_number=random.randint(1,20)
@@ -94,11 +94,11 @@ def generate_question(difficulty):
                 points1=points1+points
         if sign==4:
             answer=first_number/second_number
-            print(first_number,"÷",second_number)
-            v=input(first_number,"÷",second_number)
+            print(first_number,"/",second_number)
+            v=input(first_number,"/",second_number)
             if v==answer:
                 points1=points1+points
-        
+
     if 7<=type_of_question<11:
         first_number=random.randint(1,10)
         second_number=random.randint(1,10)
@@ -126,11 +126,11 @@ def generate_question(difficulty):
                 points1=points1+points
         if sign==4:
             answer=first_number/second_number
-            print(first_number,"÷",second_number)
-            v=input(first_number,"÷",second_number)
+            print(first_number,"/",second_number)
+            v=input(first_number,"/",second_number)
             if v==answer:
                 points1=points1+points
-        
+
     if 11<=type_of_question<14:
         first_number=random.randint(1,10)
         second_number=random.randint(1,10)
@@ -138,7 +138,7 @@ def generate_question(difficulty):
         fourth_number=random.randint(1,10)
         sign=random.randint(1,7)
         points=8
-        
+
     if 14<=type_of_question<17:
         first_number=random.randint(1,20)
         second_number=random.randint(1,20)
@@ -146,7 +146,7 @@ def generate_question(difficulty):
         fourth_number=random.randint(1,20)
         sign=random.randint(1,7)
         points=9
-        
+
     if 17<=type_of_question<=20:
         first_number=random.randint(1,50)
         second_number=random.randint(1,50)
@@ -154,9 +154,11 @@ def generate_question(difficulty):
         fourth_number=random.randint(1,50)
         sign=random.randint(1,7)
         points=10
-       
-    
-    
+    return points1
+
+
+
+
 run_program=1
 while run_program==1:
     option_selected=create_q()
