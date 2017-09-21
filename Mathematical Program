@@ -39,7 +39,7 @@ def generate_question(difficulty):
     points1=0
     turn_count=0
     type_of_question=difficulty
-    while turn_count!=20:
+    while turn_count!=15:
         if type_of_question<4:
             first_number=random.randint(1,10)
             second_number=random.randint(1,10)
@@ -47,7 +47,7 @@ def generate_question(difficulty):
             points=5
             if sign==1:
                 answer=first_number+second_number
-                print(first_number,"+",second_number)
+                print("%d+%d" % (first_number,second_number))
                 v=int(input("Enter the answer please."))
                 if v==answer:
                     points1=points1+points
@@ -60,13 +60,13 @@ def generate_question(difficulty):
                     type_of_question=type_of_question+1
             if sign==2:
                 answer=first_number-second_number
-                print(first_number,"-",second_number)
+                print("%d-%d" % (first_number,second_number))
                 v=int(input("Enter the answer please."))
                 if v==answer:
                     points1=points1+points
                     turn_count=turn_count+1
                     type_of_question=type_of_question+1
-                    
+
                     print("Correct! You have",points1,"points.")
                 else:
                     print("Wrong! The right answer was",answer)
@@ -74,13 +74,13 @@ def generate_question(difficulty):
                     type_of_question=type_of_question+1
             if sign==3:
                 answer=first_number*second_number
-                print(first_number,"x",second_number)
+                print("%dx%d" % (first_number,second_number))
                 v=int(input("Enter the answer please."))
                 if v==answer:
                     points1=points1+points
                     turn_count=turn_count+1
                     type_of_question=type_of_question+1
-                    
+
                     print("Correct! You have",points1,"points.")
                 else:
                     print("Wrong! The right answer was",answer)
@@ -92,13 +92,13 @@ def generate_question(difficulty):
                     first_number=random.randint(1,10)
                     second_number=random.randint(1,10)
                     answer=round(float(first_number/second_number),1)
-                print(first_number,"/",second_number)
+                print("%d/%d" % (first_number,second_number))
                 v=float(input("Enter the answer please."))
                 if v==answer:
                     points1=points1+points
                     turn_count=turn_count+1
                     type_of_question=type_of_question+1
-                    
+
                     print("Correct! You have",points1,"points.")
                 else:
                     print("Wrong! The right answer was",answer)
@@ -111,13 +111,13 @@ def generate_question(difficulty):
             points=6
             if sign==1:
                 answer=first_number+second_number
-                print(first_number,"+",second_number)
+                print("%d+%d" % (first_number,second_number))
                 v=int(input("Enter the answer please."))
                 if v==answer:
                     points1=points1+points
                     turn_count=turn_count+1
                     type_of_question=type_of_question+1
-                   
+
                     print("Correct! You have",points1,"points.")
                 else:
                     print("Wrong! The right answer was",answer)
@@ -125,13 +125,13 @@ def generate_question(difficulty):
                     type_of_question=type_of_question+1
             if sign==2:
                 answer=first_number-second_number
-                print(first_number,"-",second_number)
+                print("%d-%d" % (first_number,second_number))
                 v=int(input("Enter the answer please."))
                 if v==answer:
                     points1=points1+points
                     turn_count=turn_count+1
                     type_of_question=type_of_question+1
-                  
+
                     print("Correct! You have",points1,"points.")
                 else:
                     print("Wrong! The right answer was",answer)
@@ -139,13 +139,13 @@ def generate_question(difficulty):
                     type_of_question=type_of_question+1
             if sign==3:
                 answer=first_number*second_number
-                print(first_number,"x",second_number)
+                print("%dx%d" % (first_number,second_number))
                 v=int(input("Enter the answer please."))
                 if v==answer:
                     points1=points1+points
                     turn_count=turn_count+1
                     type_of_question=type_of_question+1
-                  
+
                     print("Correct! You have",points1,"points.")
                 else:
                     print("Wrong! The right answer was",answer)
@@ -157,13 +157,13 @@ def generate_question(difficulty):
                     first_number=random.randint(1,20)
                     second_number=random.randint(1,20)
                     answer=round(float(first_number/second_number),1)
-                print(first_number,"/",second_number)
+                print("%d/%d" % (first_number,second_number))
                 v=float(input("Enter the answer please."))
                 if v==answer:
                     points1=points1+points
                     turn_count=turn_count+1
                     type_of_question=type_of_question+1
-                  
+
                     print("Correct! You have",points1,"points.")
                 else:
                     print("Wrong! The right answer was",answer)
@@ -184,13 +184,13 @@ def generate_question(difficulty):
                     third_number=random.randint(1,10)
                     fourth_number=random.randint(1,10)
                     answer=round(float((first_number/second_number)+(third_number/fourth_number)),1)
-                print("(",first_number,"/",second_number,")","+","(",third_number,"/",fourth_number,")")
+                print("%d/%d + %d/%d" % (first_number,second_number,third_number,fourth_number))
                 v=float(input("Enter the answer please.(1 decimal place)"))
                 if v==answer:
                     points1=points1+points
                     turn_count=turn_count+1
                     type_of_question=type_of_question+1
-               
+
                     print("Correct! You have",points1,"points.")
                 else:
                     print("Wrong! The right answer was",answer)
@@ -204,13 +204,13 @@ def generate_question(difficulty):
                     third_number=random.randint(1,10)
                     fourth_number=random.randint(1,10)
                     answer=round(float((first_number/second_number)/(third_number/fourth_number)),1)
-                print("(",first_number,"/",second_number,")","-","(",third_number,"/",fourth_number,")")
+                print("%d/%d - %d/%d" % (first_number,second_number,third_number,fourth_number))
                 v=float(input("Enter the answer please."))
                 if v==answer:
                     points1=points1+points
                     turn_count=turn_count+1
                     type_of_question=type_of_question+1
-                 
+
                     print("Correct! You have",points1,"points.")
                 else:
                     print("Wrong! The right answer was",answer)
@@ -224,13 +224,13 @@ def generate_question(difficulty):
                     third_number=random.randint(1,10)
                     fourth_number=random.randint(1,10)
                     answer=round(float((first_number/second_number)/(third_number/fourth_number)),1)
-                print("(",first_number,"/",second_number,")","x","(",third_number,"/",fourth_number,")")
+                print("%d/%d x %d/%d" % (first_number,second_number,third_number,fourth_number))
                 v=float(input("Enter the answer please."))
                 if v==answer:
                     points1=points1+points
                     turn_count=turn_count+1
                     type_of_question=type_of_question+1
-                    
+
                     print("Correct! You have",points1,"points.")
                 else:
                     print("Wrong! The right answer was",answer)
@@ -244,13 +244,13 @@ def generate_question(difficulty):
                     third_number=random.randint(1,10)
                     fourth_number=random.randint(1,10)
                     answer=round(float((first_number/second_number)/(third_number/fourth_number)),1)
-                print("(",first_number,"/",second_number,")","/","(",third_number,"/",fourth_number,")")
+                print("%d/%d / %d/%d" % (first_number,second_number,third_number,fourth_number))
                 v=float(input("Enter the answer please."))
                 if v==answer:
                     points1=points1+points
                     turn_count=turn_count+1
                     type_of_question=type_of_question+1
-                  
+
                     print("Correct! You have",points1,"points.")
                 else:
                     print("Wrong! The right answer was",answer)
@@ -272,13 +272,13 @@ def generate_question(difficulty):
                     third_number=random.randint(1,10)
                     fourth_number=random.randint(1,10)
                     answer=round(float((first_number/second_number)+(third_number/fourth_number)),1)
-                print("(",first_number,"/",second_number,")","+","(",third_number,"/",fourth_number,")")
+                print("%d/%d + %d/%d" % (first_number,second_number,third_number,fourth_number))
                 v=float(input("Enter the answer please.(1 decimal place)"))
                 if v==answer:
                     points1=points1+points
                     turn_count=turn_count+1
                     type_of_question=type_of_question+1
-               
+
                     print("Correct! You have",points1,"points.")
                 else:
                     print("Wrong! The right answer was",answer)
@@ -292,13 +292,13 @@ def generate_question(difficulty):
                     third_number=random.randint(1,10)
                     fourth_number=random.randint(1,10)
                     answer=round(float((first_number/second_number)/(third_number/fourth_number)),1)
-                print("(",first_number,"/",second_number,")","-","(",third_number,"/",fourth_number,")")
+                print("%d/%d - %d/%d" % (first_number,second_number,third_number,fourth_number))
                 v=float(input("Enter the answer please."))
                 if v==answer:
                     points1=points1+points
                     turn_count=turn_count+1
                     type_of_question=type_of_question+1
-                 
+
                     print("Correct! You have",points1,"points.")
                 else:
                     print("Wrong! The right answer was",answer)
@@ -312,13 +312,13 @@ def generate_question(difficulty):
                     third_number=random.randint(1,10)
                     fourth_number=random.randint(1,10)
                     answer=round(float((first_number/second_number)/(third_number/fourth_number)),1)
-                print("(",first_number,"/",second_number,")","x","(",third_number,"/",fourth_number,")")
+                print("%d/%d x %d/%d" % (first_number,second_number,third_number,fourth_number))
                 v=float(input("Enter the answer please."))
                 if v==answer:
                     points1=points1+points
                     turn_count=turn_count+1
                     type_of_question=type_of_question+1
-                    
+
                     print("Correct! You have",points1,"points.")
                 else:
                     print("Wrong! The right answer was",answer)
@@ -332,13 +332,13 @@ def generate_question(difficulty):
                     third_number=random.randint(1,10)
                     fourth_number=random.randint(1,10)
                     answer=round(float((first_number/second_number)/(third_number/fourth_number)),1)
-                print("(",first_number,"/",second_number,")","/","(",third_number,"/",fourth_number,")")
+                print("%d/%d / %d/%d" % (first_number,second_number,third_number,fourth_number))
                 v=float(input("Enter the answer please."))
                 if v==answer:
                     points1=points1+points
                     turn_count=turn_count+1
                     type_of_question=type_of_question+1
-                  
+
                     print("Correct! You have",points1,"points.")
                 else:
                     print("Wrong! The right answer was",answer)
@@ -346,8 +346,8 @@ def generate_question(difficulty):
                     type_of_question=type_of_question+1
             if sign==5:
                 answer=round(float((first_number+second_number)/2))
-                print("Find the area of a triangle with base",first_number,"cm and height\n"
-                      ,second_number,"cm.")
+                print("Find the area of a triangle with base %d cm and height\n"
+                      "%d cm." % (first_number,second_number))
                 v=float(input("Enter the answer please."))
                 if v==answer:
                     points1=points1+points
@@ -361,8 +361,8 @@ def generate_question(difficulty):
             if sign==6:
                 first_number=random.randint(1,89)
                 answer=90-first_number
-                print("Two angles, one of them being",first_number,"degrees are complementary.\n"
-                      "Find the other angle.")
+                print("Two angles, one of them being %d degrees are complementary.\n"
+                      "Find the other angle." % first_number)
                 v=float(input("Enter the answer please."))
                 if v==answer:
                     points1=points1+points
@@ -388,7 +388,7 @@ def generate_question(difficulty):
                     print("Wrong! The right answer was",answer)
                     turn_count=turn_count+1
                     type_of_question=type_of_question+1
-                
+
 
         if 14<=type_of_question<17:
             first_number=random.randint(1,20)
@@ -405,13 +405,13 @@ def generate_question(difficulty):
                     third_number=random.randint(1,20)
                     fourth_number=random.randint(1,20)
                     answer=round(float((first_number/second_number)+(third_number/fourth_number)),1)
-                print("(",first_number,"/",second_number,")","+","(",third_number,"/",fourth_number,")")
+                print("%d/%d + %d/%d" % (first_number,second_number,third_number,fourth_number))
                 v=float(input("Enter the answer please.(1 decimal place)"))
                 if v==answer:
                     points1=points1+points
                     turn_count=turn_count+1
                     type_of_question=type_of_question+1
-               
+
                     print("Correct! You have",points1,"points.")
                 else:
                     print("Wrong! The right answer was",answer)
@@ -425,13 +425,13 @@ def generate_question(difficulty):
                     third_number=random.randint(1,20)
                     fourth_number=random.randint(1,20)
                     answer=round(float((first_number/second_number)/(third_number/fourth_number)),1)
-                print("(",first_number,"/",second_number,")","-","(",third_number,"/",fourth_number,")")
+                print("%d/%d - %d/%d" % (first_number,second_number,third_number,fourth_number))
                 v=float(input("Enter the answer please."))
                 if v==answer:
                     points1=points1+points
                     turn_count=turn_count+1
                     type_of_question=type_of_question+1
-                 
+
                     print("Correct! You have",points1,"points.")
                 else:
                     print("Wrong! The right answer was",answer)
@@ -445,13 +445,13 @@ def generate_question(difficulty):
                     third_number=random.randint(1,20)
                     fourth_number=random.randint(1,20)
                     answer=round(float((first_number/second_number)/(third_number/fourth_number)),1)
-                print("(",first_number,"/",second_number,")","x","(",third_number,"/",fourth_number,")")
+                print("%d/%d x %d/%d" % (first_number,second_number,third_number,fourth_number))
                 v=float(input("Enter the answer please."))
                 if v==answer:
                     points1=points1+points
                     turn_count=turn_count+1
                     type_of_question=type_of_question+1
-                    
+
                     print("Correct! You have",points1,"points.")
                 else:
                     print("Wrong! The right answer was",answer)
@@ -465,13 +465,13 @@ def generate_question(difficulty):
                     third_number=random.randint(1,20)
                     fourth_number=random.randint(1,20)
                     answer=round(float((first_number/second_number)/(third_number/fourth_number)),1)
-                print("(",first_number,"/",second_number,")","/","(",third_number,"/",fourth_number,")")
+                print("%d/%d / %d/%d" % (first_number,second_number,third_number,fourth_number))
                 v=float(input("Enter the answer please."))
                 if v==answer:
                     points1=points1+points
                     turn_count=turn_count+1
                     type_of_question=type_of_question+1
-                  
+
                     print("Correct! You have",points1,"points.")
                 else:
                     print("Wrong! The right answer was",answer)
@@ -479,8 +479,8 @@ def generate_question(difficulty):
                     type_of_question=type_of_question+1
             if sign==5:
                 answer=round(float((first_number+second_number)/2))
-                print("Find the area of a triangle with base",first_number,"cm and height\n"
-                      ,second_number,"cm.")
+                print("Find the area of a triangle with base %d cm and height\n"
+                      "%d cm." % (first_number,second_number))
                 v=float(input("Enter the answer please."))
                 if v==answer:
                     points1=points1+points
@@ -529,7 +529,7 @@ def generate_question(difficulty):
                     print("Wrong! The right answer was",answer)
                     turn_count=turn_count+1
                     type_of_question=type_of_question+1
-        if 17<=type_of_question<=20:
+        if 17<=type_of_question<=25:
             first_number=random.randint(1,50)
             second_number=random.randint(1,50)
             third_number=random.randint(1,50)
@@ -544,13 +544,13 @@ def generate_question(difficulty):
                     third_number=random.randint(1,50)
                     fourth_number=random.randint(1,50)
                     answer=round(float((first_number/second_number)+(third_number/fourth_number)),1)
-                print("(",first_number,"/",second_number,")","+","(",third_number,"/",fourth_number,")")
+                print("%d/%d + %d/%d" % (first_number,second_number,third_number,fourth_number))
                 v=float(input("Enter the answer please.(1 decimal place)"))
                 if v==answer:
                     points1=points1+points
                     turn_count=turn_count+1
                     type_of_question=type_of_question+1
-               
+
                     print("Correct! You have",points1,"points.")
                 else:
                     print("Wrong! The right answer was",answer)
@@ -564,14 +564,14 @@ def generate_question(difficulty):
                     third_number=random.randint(1,50)
                     fourth_number=random.randint(1,50)
                     answer=round(float((first_number/second_number)/(third_number/fourth_number)),1)
-                print("(",first_number,"/",second_number,")","-","(",third_number,"/",fourth_number,")")
+                print("%d/%d - %d/%d" % (first_number,second_number,third_number,fourth_number))
                 v=float(input("Enter the answer please."))
                 if v==answer:
                     points1=points1+points
                     turn_count=turn_count+1
                     type_of_question=type_of_question+1
                     print("Correct! You have",points1,"points.")
-                    
+
                 else:
                     print("Wrong! The right answer was",answer)
                     turn_count=turn_count+1
@@ -584,13 +584,13 @@ def generate_question(difficulty):
                     third_number=random.randint(1,50)
                     fourth_number=random.randint(1,50)
                     answer=round(float((first_number/second_number)/(third_number/fourth_number)),1)
-                print("(",first_number,"/",second_number,")","x","(",third_number,"/",fourth_number,")")
+                print("%d/%d x %d/%d" % (first_number,second_number,third_number,fourth_number))
                 v=float(input("Enter the answer please."))
                 if v==answer:
                     points1=points1+points
                     turn_count=turn_count+1
                     type_of_question=type_of_question+1
-                    
+
                     print("Correct! You have",points1,"points.")
                 else:
                     print("Wrong! The right answer was",answer)
@@ -604,13 +604,13 @@ def generate_question(difficulty):
                     third_number=random.randint(1,50)
                     fourth_number=random.randint(1,50)
                     answer=round(float((first_number/second_number)/(third_number/fourth_number)),1)
-                print("(",first_number,"/",second_number,")","/","(",third_number,"/",fourth_number,")")
+                print("%d/%d / %d/%d" % (first_number,second_number,third_number,fourth_number))
                 v=float(input("Enter the answer please."))
                 if v==answer:
                     points1=points1+points
                     turn_count=turn_count+1
                     type_of_question=type_of_question+1
-                  
+
                     print("Correct! You have",points1,"points.")
                 else:
                     print("Wrong! The right answer was",answer)
@@ -618,9 +618,8 @@ def generate_question(difficulty):
                     type_of_question=type_of_question+1
             if sign==5:
                 answer=round(float((first_number+second_number)/2))
-                print("Find the area of a triangle with base",first_number,"cm and height\n"
-                      ,second_number,"cm.")
-                v=float(input("Enter the answer please."))
+                print("Find the area of a triangle with base %d cm and height\n"
+                      "%d cm." % (first_number,second_number))
                 if v==answer:
                     points1=points1+points
                     turn_count=turn_count+1
@@ -674,15 +673,15 @@ def generate_question(difficulty):
                     print("Wrong! The right answer was",answer)
                     turn_count=turn_count+1
                     type_of_question=type_of_question+1
-            
+
     return points1
 
 
 
 
 run_program=1
+dif=1
 while run_program==1:
-    dif=1
     option_selected=create_q()
     if option_selected==1:
         generate_question(dif)
@@ -692,7 +691,7 @@ while run_program==1:
               "The computer also can make mistakes occasionally based on the difficulty, where 1 makes more mistakes and 10 makes the least.\n"
               "The questions come from a variety of topics and the goal is to answer them all faster than the computer.\n"
               "Points gained depends on the difficulty of the questions, which get harder as the game goes on.\n"
-              "There are 20 rounds altogether.\n"
+              "There are 15 rounds altogether.\n"
               "Decimals are always 1 decimal place.")
 
     elif option_selected==3:
@@ -704,3 +703,4 @@ while run_program==1:
 
     elif option_selected==4:
         run_program=0
+
