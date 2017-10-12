@@ -16,6 +16,7 @@ def additioneasy():
     v=int(input("Enter the answer please."))
     if v==answer:
         points=5
+        print("Correct!")
     else:
         print("Wrong! The right answer was %d" % answer)
         points=0
@@ -28,6 +29,7 @@ def additioneasy2():
     print("%d+%d" % (first_number,second_number))
     v=int(input("Enter the answer please."))
     if v==answer:
+        print("Correct!")
         points=6
     else:
         print("Wrong! The right answer was %d" % answer)
@@ -51,6 +53,7 @@ def additionmedium():
     v=float(input("Enter the answer please.(1 decimal place)"))
     if v==answer:
         points=7
+        print("Correct!")
     else:
         print("Wrong! The right answer was %d" % answer)
         points=0
@@ -72,6 +75,7 @@ def additionmedium2():
     v=float(input("Enter the answer please.(1 decimal place)"))
     if v==answer:
         points=8
+        print("Correct!")
     else:
         print("Wrong! The right answer was %d" % answer)
         points=0
@@ -93,6 +97,7 @@ def additionhard():
     v=float(input("Enter the answer please.(1 decimal place)"))
     if v==answer:
         points=9
+        print("Correct!")
     else:
         print("Wrong! The right answer was %d" % answer)
         points=0
@@ -114,6 +119,7 @@ def additionhard2():
     v=float(input("Enter the answer please.(1 decimal place)"))
     if v==answer:
         points=10
+        print("Correct!")
     else:
         print("Wrong! The right answer was %d" % answer)
         points=0
@@ -127,6 +133,7 @@ def subtractioneasy():
     v=int(input("Enter the answer please."))
     if v==answer:
         points=5
+        print("Correct!")
     else:
         print("Wrong! The right answer was %d" % answer)
         points=0
@@ -140,6 +147,7 @@ def subtractioneasy2():
     v=int(input("Enter the answer please."))
     if v==answer:
         points=6
+        print("Correct!")
     else:
         print("Wrong! The right answer was %d" % answer)
         points=0
@@ -162,6 +170,7 @@ def subtractionmedium():
     v=float(input("Enter the answer please.(1 decimal place)"))
     if v==answer:
         points=7
+        print("Correct!")
     else:
         print("Wrong! The right answer was %d" % answer)
         points=0
@@ -183,6 +192,7 @@ def subtractionmedium2():
     v=float(input("Enter the answer please.(1 decimal place)"))
     if v==answer:
         points=8
+        print("Correct!")
     else:
         print("Wrong! The right answer was %d" % answer)
         points=0
@@ -204,6 +214,7 @@ def subtractionhard():
     v=float(input("Enter the answer please.(1 decimal place)"))
     if v==answer:
         points=9
+        print("Correct!")
     else:
         print("Wrong! The right answer was %d" % answer)
         points=0
@@ -225,6 +236,7 @@ def subtractionhard2():
     v=float(input("Enter the answer please.(1 decimal place)"))
     if v==answer:
         points=10
+        print("Correct!")
     else:
         print("Wrong! The right answer was %d" % answer)
         points=0
@@ -238,6 +250,7 @@ def multiplicationeasy():
     v=int(input("Enter the answer please."))
     if v==answer:
         points=5
+        print("Correct!")
     else:
         print("Wrong! The right answer was %d" % answer)
         points=0
@@ -251,6 +264,7 @@ def multiplicationeasy2():
     v=int(input("Enter the answer please."))
     if v==answer:
         points=6
+        print("Correct!")
     else:
         print("Wrong! The right answer was %d" % answer)
         points=0
@@ -273,6 +287,7 @@ def multiplicationmedium():
     v=float(input("Enter the answer please.(1 decimal place)"))
     if v==answer:
         points=7
+        print("Correct!")
     else:
         print("Wrong! The right answer was %d" % answer)
         points=0
@@ -294,6 +309,7 @@ def multiplicationmedium2():
     v=float(input("Enter the answer please.(1 decimal place)"))
     if v==answer:
         points=8
+        print("Correct!")
     else:
         print("Wrong! The right answer was %d" % answer)
         points=0
@@ -315,6 +331,7 @@ def multiplicationhard():
     v=float(input("Enter the answer please.(1 decimal place)"))
     if v==answer:
         points=9
+        print("Correct!")
     else:
         print("Wrong! The right answer was %d" % answer)
         points=0
@@ -336,6 +353,7 @@ def multiplicationhard2():
     v=float(input("Enter the answer please.(1 decimal place)"))
     if v==answer:
         points=10
+        print("Correct!")
     else:
         print("Wrong! The right answer was %d" % answer)
         points=0
@@ -349,6 +367,7 @@ def divisioneasy():
     v=int(input("Enter the answer please."))
     if v==answer:
         points=5
+        print("Correct!")
     else:
         print("Wrong! The right answer was %d" % answer)
         points=0
@@ -362,6 +381,7 @@ def divisioneasy2():
     v=int(input("Enter the answer please."))
     if v==answer:
         points=6
+        print("Correct!")
     else:
         print("Wrong! The right answer was %d" % answer)
         points=0
@@ -384,6 +404,7 @@ def divisionmedium():
     v=float(input("Enter the answer please.(1 decimal place)"))
     if v==answer:
         points=7
+        print("Correct!")
     else:
         print("Wrong! The right answer was %d" % answer)
         points=0
@@ -405,6 +426,7 @@ def divisionmedium2():
     v=float(input("Enter the answer please.(1 decimal place)"))
     if v==answer:
         points=8
+        print("Correct!")
     else:
         print("Wrong! The right answer was %d" % answer)
         points=0
@@ -426,6 +448,7 @@ def divisionhard():
     v=float(input("Enter the answer please.(1 decimal place)"))
     if v==answer:
         points=9
+        print("Correct!")
     else:
         print("Wrong! The right answer was %d" % answer)
         points=0
@@ -447,6 +470,7 @@ def divisionhard2():
     v=float(input("Enter the answer please.(1 decimal place)"))
     if v==answer:
         points=10
+        print("Correct!")
     else:
         print("Wrong! The right answer was %d" % answer)
         points=0
@@ -460,6 +484,7 @@ def complementaryeasy():
     v=float(input("Enter the answer please."))
     if v==answer:
         points=8
+        print("Correct!")
     else:
         print("Wrong! The right answer was %d" % answer)
         points=0
@@ -477,6 +502,7 @@ def complementarymedium():
         v=float(input("Enter the answer please."))
         if v==answer:
             points=9
+            print("Correct!")
         else:
             print("Wrong! The right answer was %d" % answer)
             points=0
@@ -497,6 +523,7 @@ def complementaryhard():
         v=float(input("Enter the answer please."))
         if v==answer:
             points=10
+            print("Correct!")
         else:
             print("Wrong! The right answer was %d" % answer)
             points=0
@@ -510,6 +537,7 @@ def supplementaryeasy():
     v=float(input("Enter the answer please."))
     if v==answer:
         points=8
+        print("Correct!")
     else:
         print("Wrong! The right answer was %d" % answer)
         points=0
@@ -527,6 +555,7 @@ def supplementarymedium():
         v=float(input("Enter the answer please."))
         if v==answer:
             points=9
+            print("Correct!")
         else:
             print("Wrong! The right answer was %d" % answer)
             points=0
@@ -547,6 +576,7 @@ def supplementaryhard():
         v=float(input("Enter the answer please."))
         if v==answer:
             points=10
+            print("Correct!")
         else:
             print("Wrong! The right answer was %d" % answer)
             points=0
@@ -555,13 +585,13 @@ def supplementaryhard():
 def triangleeasy():
     first_number=float(random.randint(1,10))
     second_number=float(random.randint(1,10))
-    answer=round(float((first_number+second_number)/2))
+    answer=round(float((first_number*second_number)/2))
     print("Find the area of a triangle with base %d cm and height\n"
     "%d cm." % (first_number,second_number))
     v=float(input("Enter the answer please."))
     if v==answer:
         points=8
-        print("Correct! You have %d points." % points1)
+        print("Correct!")
     else:
         print("Wrong! The right answer was %d" % answer)
         points=0
@@ -570,13 +600,13 @@ def triangleeasy():
 def trianglemedium():
     first_number=float(random.randint(1,20))
     second_number=float(random.randint(1,20))
-    answer=round(float((first_number+second_number)/2))
+    answer=round(float((first_number*second_number)/2))
     print("Find the area of a triangle with base %d cm and height\n"
     "%d cm." % (first_number,second_number))
     v=float(input("Enter the answer please."))
     if v==answer:
         points=9
-        print("Correct! You have %d points." % points1)
+        print("Correct!")
     else:
         print("Wrong! The right answer was %d" % answer)
         points=0
@@ -585,13 +615,13 @@ def trianglemedium():
 def trianglehard():
     first_number=float(random.randint(1,50))
     second_number=float(random.randint(1,50))
-    answer=round(float((first_number+second_number)/2))
+    answer=round(float((first_number*second_number)/2))
     print("Find the area of a triangle with base %d cm and height\n"
     "%d cm." % (first_number,second_number))
     v=float(input("Enter the answer please."))
     if v==answer:
         points=10
-        print("Correct! You have %d points." % points1)
+        print("Correct!")
     else:
         print("Wrong! The right answer was %d" % answer)
         points=0
@@ -682,20 +712,72 @@ def generate_question(difficulty):
                 expoints=increasepoints(pointe)
             if choosingNo==5:
                 pointe=triangleeasy()
+                expoints=increasepoints(pointe)
             if choosingNo==6:
+                pointe=complementaryeasy()
+                expoints=increasepoints(pointe)
             if choosingNo==7:
+                pointe=supplementaryeasy()
+                expoints=increasepoints(pointe)
+        if 14<=type_of_question<17:
+            choosingNo=random.randint(1,7)
+            if choosingNo==1:
+                pointe=additionhard()
+                expoints=increasepoints(pointe)
+            if choosingNo==2:
+                pointe=subtractionhard()
+                expoints=increasepoints(pointe)
+            if choosingNo==3:
+                pointe=multiplicationhard()
+                expoints=increasepoints(pointe)
+            if choosingNo==4:
+                pointe=divisionhard()
+                expoints=increasepoints(pointe)
+            if choosingNo==5:
+                pointe=trianglemedium()
+                expoints=increasepoints(pointe)
+            if choosingNo==6:
+                pointe=complementarymedium()
+                expoints=increasepoints(pointe)
+            if choosingNo==7:
+                pointe=supplementarymedium()
+                expoints=increasepoints(pointe)
+        if 17<=type_of_question<30:
+            choosingNo=random.randint(1,7)
+            if choosingNo==1:
+                pointe=additionhard2()
+                expoints=increasepoints(pointe)
+            if choosingNo==2:
+                pointe=subtractionhard2()
+                expoints=increasepoints(pointe)
+            if choosingNo==3:
+                pointe=multiplicationhard2()
+                expoints=increasepoints(pointe)
+            if choosingNo==4:
+                pointe=divisionhard2()
+                expoints=increasepoints(pointe)
+            if choosingNo==5:
+                pointe=trianglehard()
+                expoints=increasepoints(pointe)
+            if choosingNo==6:
+                pointe=complementaryhard()
+                expoints=increasepoints(pointe)
+            if choosingNo==7:
+                pointe=supplementaryhard()
+                expoints=increasepoints(pointe)
+    return expoints
 
-    return
 
 
-points1
+points1=0
 run_program=1
 dif=1
 while run_program==1:
     option_selected=create_q()
     if option_selected==1:
-        generate_question(dif)
-
+        uppoint=generate_question(dif)
+        points1=points1+uppoint
+        print("You now have %d points. Good job!" % points1)
     elif option_selected==2:
         print("Each level of difficulty increases the speed that the computer finishes the question, where 1 is the lowest and 10 is the highest.\n"
               "The computer also can make mistakes occasionally based on the difficulty, where 1 makes more mistakes and 10 makes the least.\n"
