@@ -1,0 +1,25 @@
+class Taxi:
+
+    def __init__(self, regID, chargepertime):
+        self.regID = regID
+        self.chargepertime = chargepertime
+
+
+class Car(Taxi):
+
+    def __init__(self, maxpassengers):
+        self.maxpassengers = 4
+
+    def calculatefare(self, time):
+        fare = self.chargepertime * time
+
+
+
+class Minibus(Taxi):
+
+    def __init__(self, extrafare, maxpassengers):
+        self.extrafare = extrafare
+        self.maxpassengers = maxpassengers
+
+    def calculatefare(self, time):
+        fare = (self.chargepertime * time)+ self.extrafare
