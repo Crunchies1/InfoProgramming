@@ -1,0 +1,69 @@
+class Taxi:
+
+    def __init__(self, regID, chargepertime):
+        self.regID = regID
+        self.chargepertime = chargepertime
+
+
+class Car(Taxi):
+
+    def __init__(self, maxpassengers):
+        self.maxpassengers = 4
+
+    def calculatefare(self, time):
+        fare = self.chargepertime * time
+
+
+
+class Minibus(Taxi):
+
+    def __init__(self, extrafare, maxpassengers):
+        self.extrafare = extrafare
+        self.maxpassengers = maxpassengers
+
+    def calculatefare(self, time):
+        fare = (self.chargepertime * time)+ self.extrafare
+
+def LeftToInt(thisstring, integer):
+    if len(thisstring)<integer:
+        my_error=ValueError("{0} is less than {1}".format(len(thisstring),integer))
+        raise my_error
+    splitting=list(thisstring)
+    for i in range(len(thisstring)):
+        if splitting[i]==int:
+            my_error2=ValueError("{0} is an integer which is not allowed.".format(splitting[i]))
+            raise my_error2
+    arc=[]
+    for i in range(integer):
+        arc.append(splitting[i])
+        x="".join(arc)
+    print(x)
+
+def Hash(IBSN):
+    address=LeftToInt(IBSN,3)
+    return address
+
+
+def dummyfile():
+    newfile=open("prerelease.txt","r+")
+    newfile.write("0000000000\n")
+    arg=1
+    while True:
+        text=newfile.readline()
+        if arg==100:
+            break
+        if len(text)==0:
+            newfile.write("0000000000\n")
+            arg=arg+1
+            continue
+    newfile.close()
+
+def inpbookrecord():
+    newfile=open("prerelease.txt","r+")
+    for i in range(5):
+        IBSN=int(input("Please input the IBSN."))
+        Title=input("Please enter the book title.")
+        newaddress=hash(IBSN)
+
+
+dummyfile()
