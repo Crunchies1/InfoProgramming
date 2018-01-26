@@ -1,0 +1,67 @@
+class Toy():
+    def __init__(self, Name="", ID="", MinAge=0, Price=0):
+        assert 0<MinAge<18, "MinAge must be between 0 and 18"
+        self._Name=Name
+        self._ID=ID
+        self._MinAge=MinAge
+        self._Price=Price
+    def SetName(self, Name):
+        self.Name=Name
+    def SetID(self, ID):
+        self.ID=ID
+    def SetMinAge(self, MinAge):
+        self.MinAge=MinAge
+    def SetPrice(self, Price):
+        self.Price=Price
+    def GetName(self):
+        return self.Name
+    def GetID(self):
+        return self.ID
+    def GetMinAge(self):
+        return self.MinAge
+    def GetPrice(self):
+        return self.Price
+
+class ComputerGame(Toy):
+    def __init__(self, Category="", Console=""):
+        Toy.__init__(self)
+        self.Category=Category
+        self.Console=Console
+    def SetCategory(self, Category):
+        self._Category=Category
+    def SetConsole(self, Console):
+        self._Console=Console
+    def GetCategory(self):
+        return self._Category
+    def GetConsole(self):
+        return self._Console
+
+class Vehicle(Toy):
+    def __init__(self, Type="", Height=0, Length=0, Weight=0):
+        Toy.__init__(self)
+        assert 0<Height<20, "height must be between 0 and 20"
+        assert 0<Length<20, "length must be between 0 and 20"
+        assert 0<Weight<20, "Weight must be between 0 and 20"
+        self._Type=Type
+        self._Height=Height
+        self._Length=Length
+        self._Weight=Weight
+    def SetType(self, Type):
+        self._Type=Type
+    def SetHeight(self, Height):
+        self._Height=Height
+    def SetLength(self,Length):
+        self._Length=Length
+    def SetWeight(self,Weight):
+        self._Weight=Weight
+    def GetType(self):
+        return self._Type
+    def GetHeight(self):
+        return self._Height
+    def GetLength(self):
+        return self._Length
+    def GetWeight(self):
+        return self._Weight
+
+Train=Toy("TrainA","A01",15,99)
+print(Train.GetMinAge())
