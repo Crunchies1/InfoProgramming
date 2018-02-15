@@ -1,0 +1,31 @@
+def get_age():
+    age = int(input("Please enter your age: "))
+    if age < 0:
+        # Create a new instance of an exception
+        my_error = ValueError("{0} is not a valid age".format(age))
+        raise my_error
+    return age
+get_age()
+
+def recursion_depth(number):
+    print("Recursion depth number", number)
+    try:
+        recursion_depth(number + 1)
+    except:
+        print("I cannot go any deeper into this wormhole.")
+
+recursion_depth(0)
+
+def readposint():
+    number=int(input("Please enter a positive number."))
+    if number<1:
+        my_error=ValueError("{0} is not a valid age.".format(age))
+        raise my_error
+    if number!=int:
+        my_error=ValueError("Please enter a number.")
+        raise my_error
+    finally:
+        
+    return number
+
+readposint()
