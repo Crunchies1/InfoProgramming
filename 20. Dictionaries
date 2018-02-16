@@ -1,0 +1,46 @@
+eng2sp={}
+eng2sp["one"]="uno"
+eng2sp["two"]="dos"
+print(eng2sp)
+eng2sp={"one":"uno","two":"dos","three":"tres"}
+inventory={"apples":430,"oranges":525,"bananas":312,"pears":217}
+del inventory["pears"]
+inventory["bananas"]+=200
+len(inventory)
+
+for (k,v) in eng2sp.items():
+    print("Got", k,"that maps to",v)
+
+list(eng2sp.values())
+
+opposites={"up":"down","right":"wrong","yes":"no"}
+alias=opposites
+copy=opposites.copy()
+alias["right"]="left"
+opposites["right"]
+copy["right"]="privilege"
+opposites["right"]
+
+matrix={(0,3):1,(2,1):2,(4,3):3}
+matrix.get((0,3),0)
+
+alreadyknown={0:0,1:1}
+
+def fib(n):
+    if n not in alreadyknown:
+        new_value=fib(n-1)+fib(n-2)
+        alreadyknown[n]=new_value
+    return alreadyknown[n]
+
+fib(100)
+
+letter_counts={}
+for letter in "Mississipi":
+    letter_counts[letter]=letter_counts.get(letter,0)+1
+
+letter_counts
+
+letter_items=list(letter_counts.items())
+letter_items.sort()
+print(letter_items)
+
