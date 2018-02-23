@@ -58,6 +58,21 @@ class ImprovedQueue:
         if self.length == 0:
             self.last = None
         return cargo
+        
+class ListQueue:
+    def __init__(self):
+        self.items = []
+
+    def is_empty(self):
+        return not self.items
+
+    def insert(self, item):
+        self.items.append(item)
+
+    def remove(self):
+        x=self.items[0]
+        del self.items[0]
+        return x
 
 class PriorityQueue:
     def __init__(self):
@@ -77,6 +92,52 @@ class PriorityQueue:
         item = self.items[maxi]
         del self.items[maxi]
         return item
+        
+class PrioNodes:
+    def __init__(self, cargo=None, next=None, prio=0):
+        self.cargo=cargo
+        self.next=next
+        self.prio=prio
+
+    def __str__(self):
+        return str(("{0}, {1})" .format(self.cargo, self.prio)))
+
+
+class PriorityLinkedQueue:
+    def __init__(self):
+        self.length=0
+        self.head=None
+        self.last=None
+
+    def is_empty(self):
+        return self.length==0
+
+    def insert(self, cargo, prio):
+        node = PrioNodes(cargo)
+        if self.length == 0:
+            self.head = self.last = node
+        else:
+            node=PrioNodes(prio)
+            currentlength=self.length
+            print(currentlength)
+            while self.length==currentlength:
+                if node.prio<self.head.prio:
+                    self.head=node
+                    self.length +=1
+                else:
+                    self.head = self.head.next
+                    if self.head.prio<node.prio:
+                        self.head=self.head.next
+                    else:
+                        self.head=node
+
+    def remove(self):
+        cargo = self.head.cargo
+        self.head = self.head.next
+        self.length -= 1
+        if self.length == 0:
+            self.last = None
+        return cargo
 
 class Golfer:
     def __init__(self, name, score):
