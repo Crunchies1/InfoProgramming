@@ -1,0 +1,34 @@
+import random
+
+class Player:
+    def __init__(self,score):
+        self.score=score
+        self.health=3
+    def __str__(self):
+        return ("{0}, {1}").format(self.score,self.health)
+       
+    def update_score(self,score):
+        self.score=score
+        print(self.score)
+    
+    def update_health(self,health):
+        self.health=health
+        print(self.health)
+        
+class QuestionCreator:
+    def __init__(self, difficulty):
+        self.difficulty=difficulty
+        
+        
+    def fire_question(self,Qnumber):
+        listy=[]
+        listy.append("Give the key term that corresponds with this definition: A computer program that can be used to create other computer programs.")
+        listy.append("Give the key term that corresponds with this definition: A collection of pre-compiled routines or modules that a program can use.")
+        listy.append("Finish the sentence: The first computers had to be programmed using _______ ____")
+        listy.append("Finish the sentence: Interpreters and compilers were invented to generate ___-_____ ____ from high-level programs written by people.")
+        listy.append("Is this a reason why software may not perform as expected? : The programmer has made a coding mistake.")
+        listy.append("Is this a reason why software may not perform as expected? : The software designer has made a design error.")
+        listy.append("Is this a reason why software may not perform as expected? : The user interface is poorly designed and the user makes mistakes.")
+        listy.append("Is this a reason why software may not perform as expected? : The") 
+        Qnumber=random.randint(1,len(listy))
+        return listy[Qnumber]
